@@ -1,0 +1,400 @@
+@charset "UTF-8";
+/*variables du projet 3*/
+/*couleurs*/
+/*police*/
+/*mixins du projet 5*/
+/*reglage des éléments du body*/
+body {
+  width: 100%;
+  min-width: 320px;
+  max-width: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px;
+  font-family: "Shrikhand";
+}
+
+body :hover {
+  color: initial;
+}
+
+/*format de l'en-tête de l'accueil*/
+/*format des liens*/
+a {
+  text-decoration: none;
+  color: #412727;
+}
+
+h1 {
+  font-family: "Shrikhand";
+}
+
+.container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  background: #efca86;
+}
+
+.header-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.fa-shopping-cart {
+  font-size: 30px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  padding: 10px 0;
+}
+
+.nav__logo {
+  color: #412727;
+  font-size: 25px;
+}
+
+.nav__panier {
+  position: relative;
+  color: #412727;
+  font-size: 30px;
+}
+
+.nav__number {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  position: absolute;
+  padding: 0px 10px;
+  background-color: black;
+  color: black;
+  top: -15px;
+  right: -15px;
+  border-radius: 200px;
+}
+
+.nav__number p {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+/*partie principale de l'accueil*/
+main .container-produits {
+  background-color: wheat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 0;
+}
+
+main .container-produits h3 {
+  font-family: "Shrikhand";
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+main .container-produits .produits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.9fr;
+      grid-template-columns: 0.9fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  width: 90%;
+  max-width: 1700px;
+}
+
+@media screen and (min-width: 500px) {
+  main .container-produits .produits {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main .container-produits .produits {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+main .container-produits .produits .produit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  max-height: 230px;
+  background: wheat;
+  border-radius: 20px 20px 20px 20px;
+}
+
+main .container-produits .produits .produit__img {
+  width: 100%;
+  height: 80%;
+  max-height: 250px;
+  background: wheat;
+  border-radius: 20px 20px 0 0;
+}
+
+@media screen and (min-width: 1000px) {
+  main .container-produits .produits .produit__img {
+    height: 100%;
+    max-height: 180px;
+  }
+}
+
+main .container-produits .produits .produit__img img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 100%;
+  max-height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .container-produits .produits .produit__infos {
+  bottom: 0;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20%;
+  width: 100%;
+  padding: 0 20px;
+  background: #efca86;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 15px;
+  border-radius: 0 0 20px 20px;
+  color: #412727;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/*organisation du footer*/
+footer {
+  background: #efca86;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 2%;
+  width: 100%;
+  height: 80px;
+}
+
+footer .nav {
+  color: #412727;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  padding: 0 10px;
+}
+
+footer .nav__lien {
+  color: #412727;
+  font-size: 15px;
+  font-family: "Shrikhand";
+}
+
+@media screen and (min-width: 600px) {
+  footer .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 90%;
+  }
+}
+
+/*images du projet 5*/
+.banniere {
+  width: 100%;
+  min-width: 320px;
+  max-width: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.banniere__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: black;
+  width: 100%;
+  background-image: url(../images/banniere.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25rem;
+}
+
+@media screen and (min-width: 600px) {
+  .banniere__text {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .banniere__text {
+    padding-right: 40px;
+    padding-top: 20px;
+  }
+}
+
+.banniere__title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  .banniere__title {
+    font-size: 35px;
+  }
+}
+
+.banniere__description {
+  font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .banniere__description {
+    font-size: 35px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

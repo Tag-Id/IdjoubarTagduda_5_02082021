@@ -1,0 +1,45 @@
+/*images du projet 5*/
+
+.banniere {
+    @include fullscreen;
+    @include center;
+
+    &__text {
+      @include flexcol;
+      align-items: center;
+      justify-content: flex-end;
+      color: $text-color;
+      width: 100%;
+      background-image: url(../images/banniere.jpg); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 25rem;
+
+      @media screen and (min-width: 600px) {
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-right: 20px;
+      }
+      @media screen and (min-width: 1400px) {
+        padding-right: 40px;
+        padding-top: 20px;
+      }
+    }
+    &__title {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      max-width: 700px;
+      margin-bottom: 10px;
+      @media screen and (min-width: 1000px) {
+        font-size: 35px;
+      }
+    }
+    &__description {
+      font-size: 20px;
+      text-align: center;
+      @media screen and (min-width: 1000px) {
+        font-size: 35px;
+      }
+    }
+  }

@@ -1,0 +1,12 @@
+/*reglage des éléments du body*/
+body
+    {
+        @include fullscreen;
+        @include center;
+        @include flexcol;
+        margin: 0px;
+        font-family: $police;
+        :hover{
+            color: initial;
+        }
+    }

@@ -1,0 +1,21 @@
+/*mixins du projet 5*/
+
+@mixin fullscreen 
+{
+    width: 100%;
+    min-width: 320px;
+    max-width: none;
+} 
+
+@mixin center 
+{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+@mixin flexcol 
+{
+    display: flex;
+    flex-direction: column;
+}
